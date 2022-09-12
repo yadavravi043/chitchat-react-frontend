@@ -65,7 +65,7 @@ export default function Register() {
     event.preventDefault();
     if (handleValidation()) {
       const { email, username, password } = values;
-      const { data } = await axios.post(registerRoute, {
+      const { data } = await axios.post("https://chatapp043.herokuapp.com/registerRoute", {
         username,
         email,
         password,

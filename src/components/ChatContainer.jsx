@@ -15,7 +15,7 @@ export default function ChatContainer({ currentChat, socket }) {
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
-    const response = await axios.post(recieveMessageRoute, {
+    const response = await axios.post("https://chatapp043.herokuapp.com/recieveMessageRoute", {
       from: data._id,
       to: currentChat._id,
     });
@@ -42,7 +42,7 @@ export default function ChatContainer({ currentChat, socket }) {
       from: data._id,
       msg,
     });
-    await axios.post(sendMessageRoute, {
+    await axios.post("https://chatapp043.herokuapp.com/sendMessageRoute", {
       from: data._id,
       to: currentChat._id,
       message: msg,

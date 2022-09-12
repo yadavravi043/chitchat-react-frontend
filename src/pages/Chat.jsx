@@ -35,7 +35,7 @@ export default function Chat() {
   useEffect(async () => {
     if (currentUser) {
       if (currentUser.isAvatarImageSet) {
-        const data = await axios.get(`${allUsersRoute}/${currentUser._id}`);
+        const data = await axios.get(`https://chatapp043.herokuapp.com/${allUsersRoute}/${currentUser._id}`);
         setContacts(data.data);
       } else {
         navigate("/setAvatar");
