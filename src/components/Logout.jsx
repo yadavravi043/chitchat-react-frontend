@@ -10,7 +10,7 @@ export default function Logout() {
     const id = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     )._id;
-    const data = await axios.get(`https://chatapp043.herokuapp.com/${logoutRoute}/${id}`);
+    const data = await axios.get(`${logoutRoute}/${id}`);
     if (data.status === 200) {
       localStorage.clear();
       navigate("/login");
