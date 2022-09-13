@@ -83,9 +83,9 @@ export default function Login() {
             onChange={(e) => handleChange(e)}
           />
           <button type="submit">Log In</button>
-          <span>
+          <footer>
             Don't have an account ? <Link to="/register">Create One.</Link>
-          </span>
+          </footer>
         </form>
       </FormContainer>
       <ToastContainer />
@@ -102,6 +102,7 @@ const FormContainer = styled.div`
   gap: 1rem;
   align-items: center;
   background-color: #131324;
+
   .brand {
     display: flex;
     align-items: center;
@@ -148,10 +149,11 @@ const FormContainer = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
     &:hover {
-      background-color: #4e0eff;
+      // background-color: #4e0eff;
+      background-color: green;
     }
   }
-  span {
+  footer {
     color: white;
     text-transform: uppercase;
     a {

@@ -117,9 +117,9 @@ export default function Register() {
             onChange={(e) => handleChange(e)}
           />
           <button type="submit">Create User</button>
-          <span>
+          <footer>
             Already have an account ? <Link to="/login">Login.</Link>
-          </span>
+          </footer>
         </form>
       </FormContainer>
       <ToastContainer />
@@ -185,7 +185,7 @@ const FormContainer = styled.div`
       background-color: #4e0eff;
     }
   }
-  span {
+  footer {
     color: white;
     text-transform: uppercase;
     a {
