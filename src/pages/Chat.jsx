@@ -81,3 +81,4 @@ const Container = styled.div`
     }
   }
 `;
+// import host,ref,socket and pass socket props to chat container

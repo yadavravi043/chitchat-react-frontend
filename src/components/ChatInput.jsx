@@ -20,7 +20,7 @@ export default function ChatInput({ handleSendMsg }) {
   const sendChat = (event) => {
     event.preventDefault();
     if (msg.length > 0) {
-      handleSendMsg(msg);
+      handleSendMsg(msg); //it is props passed from parent chatcontainer
       setMsg("");
     }
   };
