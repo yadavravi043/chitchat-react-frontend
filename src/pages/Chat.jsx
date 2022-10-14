@@ -11,6 +11,7 @@ import Welcome from "../components/Welcome";
 export default function Chat() {
   const navigate = useNavigate();
   const socket = useRef();
+  //const socket = io("https://my-chat-app-ravi.herokuapp.com");
   const [contacts, setContacts] = useState([]);
   const [currentChat, setCurrentChat] = useState(undefined);
   const [currentUser, setCurrentUser] = useState(undefined);
